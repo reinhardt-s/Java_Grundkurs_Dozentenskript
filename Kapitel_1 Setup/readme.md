@@ -1,6 +1,6 @@
 # Kapitel 1 - Einführung
 
-## Was mach Java so besonders?
+## Was macht Java so besonders?
 Java bietet eine Reihe von Merkmalen, die es von vielen anderen Programmiersprachen unterscheiden:
 
 1. **Plattformunabhängigkeit**: Dank der Java Virtual Machine (JVM) ist Java-Code plattformunabhängig. Sie können ein Programm einmal schreiben und es auf jedem Gerät laufen lassen, das eine JVM hat. Dies steht im Gegensatz zu Sprachen wie C++ oder Go, deren Code speziell für eine bestimmte Plattform kompiliert werden muss.
