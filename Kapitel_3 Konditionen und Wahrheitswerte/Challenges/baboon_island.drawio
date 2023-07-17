@@ -1,0 +1,193 @@
+<mxfile host="app.diagrams.net" modified="2023-06-06T09:17:12.010Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="hkGBDTHggloS2YiF0wg7" version="21.3.7" type="onedrive">
+  <diagram id="PGsBlBb2dd3ptILUB0lY" name="Seite-1">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1200" pageHeight="4000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LgTB3uXJrdWelqoI3alY-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-1" target="LgTB3uXJrdWelqoI3alY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-1" value="Willkommen auf Baboon Island" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="544" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-2" target="LgTB3uXJrdWelqoI3alY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-2" value="Irgendwo auf dieser Insel ist eine goldene Pavian-Statue. Finde Sie und überlebe." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="544" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-4" target="LgTB3uXJrdWelqoI3alY-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-4" value="Du hast am Strand angelegt. Du kannst entweder weiter am Strand laufen oder in den Dschungel gehen" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="519" y="320" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-6" target="LgTB3uXJrdWelqoI3alY-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-10" value="Duschungel" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-9">
+          <mxGeometry x="-0.3358" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-6" target="LgTB3uXJrdWelqoI3alY-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-13" value="Strand" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-12">
+          <mxGeometry x="-0.5414" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-6" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="564" y="450" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-8" target="LgTB3uXJrdWelqoI3alY-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-8" value="Du kämpfst dich durch den dichten Dschungel, kommst aber kaum voran. Mit der Machete könntest du dir einen Weg freischlagen." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="610" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-11" target="LgTB3uXJrdWelqoI3alY-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-11" value="Du triffst auf eine Gruppe Paviane, die am Speerfischen sind. Was tust du?" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-14" target="LgTB3uXJrdWelqoI3alY-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-20" value="fliehen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-17">
+          <mxGeometry x="-0.2452" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-14" target="LgTB3uXJrdWelqoI3alY-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-21" value="vorstellen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-19">
+          <mxGeometry x="-0.5446" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-14" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="740" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-16" value="Du stolperst über eine zerbrochene Riesenmuschel, und schneidest dir dabei den Fuß auf. Dein Abenteuer endet hier." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="870" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-18" value="Du gehst zu den Pavianen, stellst dich vor und schüttelst ein paar Hände. Nach einer halben Stunde bist du sicher, dass du das Jobinterview gemeistert hast. Doch die Paviane haben nie zurückgerufen. Dein Abenteuer endet hier." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="870" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-22" target="LgTB3uXJrdWelqoI3alY-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-29" value="weiter" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-25">
+          <mxGeometry x="-0.6565" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-22" target="LgTB3uXJrdWelqoI3alY-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-28" value="Machete" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-27">
+          <mxGeometry x="-0.8456" y="1" relative="1" as="geometry">
+            <mxPoint x="17" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-22" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="770" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-24" target="LgTB3uXJrdWelqoI3alY-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-24" value="Du kommst an einer Steintafel an auf der folgendes geschrieben steht: &quot;Womit jagen Paviane Fische?&quot;&lt;br&gt;&lt;br&gt;Darunter sind zwei herausgehobene Bilder zu sehen. Ein Speer und Käscher.&lt;br&gt;Worauf drückst du?" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="970" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-26" value="Schon beim ersten Schwung mit der Machete wird dir klar, dass du mit der Machete nicht umgehen kannst. Du rutscht ab, schneidest ein dünnes Stück Holz ab, welches als fieser kleine Splitter nun in deiner Hand steckt. Jede Bewegung mit der Hand tut nun voll weh. Dein Abenteuer endet hier," style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="970" width="310" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-30" target="LgTB3uXJrdWelqoI3alY-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-36" value="Käscher" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-33">
+          <mxGeometry x="-0.8216" y="2" relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-30" target="LgTB3uXJrdWelqoI3alY-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-37" value="Speer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-35">
+          <mxGeometry x="-0.4306" y="2" relative="1" as="geometry">
+            <mxPoint x="-17" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-30" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1175" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-32" target="LgTB3uXJrdWelqoI3alY-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-32" value="Es poltert in der Steintafel und aus einer Öffnung an der Seite fällt ein Glasauge mit goldener Pupille heraus." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1340" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-34" target="LgTB3uXJrdWelqoI3alY-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="305" y="1490" />
+              <mxPoint x="190" y="1490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-34" value="Es poltert in der Steintafel und aus einer Öffnung an der Seite fällt eine goldene Minibanane heraus" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="1340" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-38" target="LgTB3uXJrdWelqoI3alY-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-38" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1530" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-41" target="LgTB3uXJrdWelqoI3alY-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-41" value="Nach dem du den halben Tag gesucht hast, kommst du an eine Stelle an der sich zwei Palmen überkreuzen. Eine davon hat eine bananenförmige Vertiefung." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1700" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-43" target="LgTB3uXJrdWelqoI3alY-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="1930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-47" value="keine Banane" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-46">
+          <mxGeometry x="-0.4444" y="1" relative="1" as="geometry">
+            <mxPoint x="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LgTB3uXJrdWelqoI3alY-43" target="LgTB3uXJrdWelqoI3alY-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-50" value="Banane" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="LgTB3uXJrdWelqoI3alY-49">
+          <mxGeometry x="-0.6624" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-43" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1890" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-45" value="Du läufst zurück in den Dschungel und holst dutzende Bananen von verschiedenen Bäumen. Doch keine will so recht passen. Eine Gruppe Paviane, die gerade vom Fischen kommt, kommt an dir vorbei. Sie halten dir einen empörten Vortrag über Lebensmittelverschwendung und Schädigung des Ökosystems. Dein Abenteuer endet hier." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="2070" width="170" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="LgTB3uXJrdWelqoI3alY-48" value="Du legst die goldene Banane in die Vertiefung. Erst passiert eine Weile nichts, doch als du gerade gehen willst, sagt die linke Palme danke. Zwischen den Palmen knarrt es. Der Boden beginnt etwas zu wackeln und es öffnet sich eine verborgene Bodenklappe genau zischen den beiden Bäumen.&lt;br&gt;&lt;br&gt;Du schaust hinein und findest die Pavianstatue.&lt;br&gt;&lt;br&gt;Glückwunsch. Du hast das Spiel gemeistert." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="2070" width="220" height="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
