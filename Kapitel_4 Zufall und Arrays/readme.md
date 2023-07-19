@@ -268,6 +268,44 @@ List<String> sortedNames = names.stream()
         .sorted((name1, name2) -> name1.length() - name2.length())
         .collect(Collectors.toList());
 ```
+Die **Natural Order** (natürliche Ordnung) ist die Ordnung, die auf natürliche Weise von der Implementierung eines Objekttyps bereitgestellt wird. Für primitiven Datentypen und einige eingebaute Objekte in Java, wie z.B. `String`, `Integer`, `Double` etc., ist die natürliche Ordnung bereits definiert. Beispielsweise sortiert die natürliche Ordnung von `String` alphabetisch, während `Integer` numerisch sortiert.
+
+Wenn Sie jedoch eine benutzerdefinierte Klasse haben, müssen Sie die natürliche Ordnung selbst festlegen. Dies kann durch das Implementieren des `Comparable` Interfaces und das Überschreiben der `compareTo` Methode erreicht werden. Die `compareTo` Methode gibt einen negativen, null oder positiven Wert zurück, je nachdem ob das aktuelle Objekt kleiner, gleich oder größer als das übergebene Objekt ist.
+
+```java
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return this.age - other.age;
+    }
+}
+```
+
+Nun können Sie eine Liste von `Person`-Objekten in natürlicher Ordnung sortieren:
+
+```java
+List<Person> people = Arrays.asList(new Person("Alice", 20), new Person("Bob", 30), new Person("Charlie", 25));
+Collections.sort(people); // people is now sorted in natural order (by age)
+```
+
+Bitte beachten Sie, dass bei diesem Ansatz angenommen wird, dass 'jüngere' Personen 'kleiner' sind. Wenn Sie die Ordnung umkehren möchten (so dass 'ältere' Personen 'kleiner' sind), würden Sie `other.age - this.age` zurückgeben.
+
 
 ### Abbilden
 
