@@ -26,41 +26,40 @@
 // charlie: name="Charlie", course="Java", skill_level=75
 // dave: name="Dave", course="Python", skill_level=75
 
-public class App {
-    public static void main(String[] args) throws Exception {
-        testTrainees();
-        testTrainer();
-    }
 
-    public static void testTrainees() {
+public class App {
+    public static void main(String[] args) {
+        // create Trainee objects
         Trainee alice = new Trainee("Alice", 14, "Python");
         Trainee bob = new Trainee("Bob", 14, "Java");
 
-        print(alice.whoAmI());
-        print(bob.whoAmI());
+        // print initial Trainee information
+        System.out.println(alice.whoAmI());
+        System.out.println(bob.whoAmI());
 
+        // add skill points to Trainees
         alice.addSkillPoints(3);
         bob.addSkillPoints(3);
 
-        print(alice.whoAmI());
-        print(bob.whoAmI());
-    }
+        // print updated Trainee information
+        System.out.println(alice.whoAmI());
+        System.out.println(bob.whoAmI());
 
-    public static void testTrainer() {
+        // create Trainer objects
         Trainer charlie = new Trainer("Charlie", 14, "Java");
         Trainer dave = new Trainer("Dave", 14, "Python");
 
-        print(charlie.whoAmI());
-        print(dave.whoAmI());
+        // print initial Trainer information
+        System.out.println(charlie.whoAmI());
+        System.out.println(dave.whoAmI());
 
+        // have Trainers teach
         charlie.teach();
         dave.teach();
 
-        print(charlie.whoAmI());
-        print(dave.whoAmI());
-    }
-
-    public static void print(String message) {
-        System.out.println(message);
+        // print updated Trainer information
+        System.out.println(charlie.whoAmI());
+        System.out.println(dave.whoAmI());
     }
 }
+

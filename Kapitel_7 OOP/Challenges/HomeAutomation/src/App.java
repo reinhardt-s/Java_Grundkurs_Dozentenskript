@@ -21,6 +21,17 @@
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Dishwasher dishwasher = new Dishwasher();
+        CoffeeMaker coffeeMaker = new CoffeeMaker();
+
+        dishwasher.setRunCycles(15);
+
+        if (dishwasher.checkIfDirty()) {
+            dishwasher.startCleaning();
+        }
+
+        if (coffeeMaker.checkIfDirty()) {
+            coffeeMaker.startCleaning();
+        }
     }
 }

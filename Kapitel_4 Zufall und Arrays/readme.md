@@ -228,6 +228,46 @@ Löse die Challenge in der Datei `Challenges/BaboonFigure.java`.
 ## Challenge 4 - Abschlussprojekt: Rock Paper Scissors Lizard Spock
 Löse die Challenge in der Datei `Challenges/RockPaperScissorsLizardSpock.java`.
 
+## Streams
+
+Streams sind eine wichtige Datenstruktur in Java und bieten eine effiziente Möglichkeit zur Verarbeitung und Transformation von Daten. In diesem Kapitel werden wir uns genauer mit Streams, ihrer Funktionsweise und ihrer Nutzung in Java auseinandersetzen.
+
+### Was sind Streams?
+
+Ein Stream in Java ist eine Sequenz von Elementen, die aus einer Datenquelle stammen. Diese Datenquelle kann eine Sammlung, ein Array oder ein Eingabe/Ausgabe-Kanal sein. Die Elemente in einem Stream werden sequenziell verarbeitet, das heißt, sie werden nacheinander und nicht gleichzeitig verarbeitet.
+
+### Streams erstellen
+
+Streams können aus einer Vielzahl von Datenquellen erstellt werden. Eine gängige Methode zur Erstellung von Streams ist die Verwendung der `stream()` Methode, die in Sammlungen wie Listen oder Sets zur Verfügung steht. 
+
+```java
+List<String> names = Arrays.asList("John", "Sarah", "Mark", "Tina", "Emily");
+Stream<String> stream = names.stream();
+```
+
+### Arbeiten mit Streams
+
+Streams bieten eine Reihe von Methoden, die auf die Elemente im Stream angewendet werden können. Diese Methoden können in zwei Hauptkategorien unterteilt werden:
+
+1. **Zwischenoperationen (Intermediate operations)**: Diese Operationen transformieren einen Stream in einen anderen Stream. Sie sind "lazy", was bedeutet, dass sie erst ausgeführt werden, wenn eine endgültige Operation aufgerufen wird. Beispiele für Zwischenoperationen sind `filter`, `map` und `sorted`.
+
+2. **Endoperationen (Terminal operations)**: Diese Operationen produzieren ein endgültiges Ergebnis und beenden den Stream. Beispiele für Endoperationen sind `collect`, `forEach`, `reduce` und `sum`.
+
+### Beispiel: Nutzung von Streams
+
+Hier ist ein einfaches Beispiel, wie Streams verwendet werden können, um eine Liste von Namen zu filtern und zu sortieren:
+
+```java
+List<String> names = Arrays.asList("John", "Sarah", "Mark", "Tina", "Emily");
+List<String> sortedNames = names.stream()
+    .filter(name -> name.length() > 4)
+    .sorted()
+    .collect(Collectors.toList());
+```
+
+In diesem Beispiel wird ein Stream aus der Liste `names` erstellt, die `filter` Methode wird verwendet, um alle Namen zu entfernen, die weniger als 4 Buchstaben lang sind, die `sorted` Methode wird verwendet, um die verbleibenden Namen zu sortieren, und schließlich wird die `collect` Methode verwendet, um die Elemente des Streams in eine neue Liste zu sammeln.
+
+
 ## Anwendung von Arrays
 
 Arrays finden Anwendung in zahlreichen Bereichen der Programmierung. Sie dienen zur Speicherung mehrerer Werte eines bestimmten Typs und ermöglichen es, mit diesen Werten in einer Schleife oder über Indizes zu arbeiten. Sie sind eine der grundlegenden Datenstrukturen und finden sich in nahezu jedem Bereich der Softwareentwicklung, von einfachen Aufgaben bis hin zu komplexen Algorithmen und Datenverarbeitungsaufgaben.

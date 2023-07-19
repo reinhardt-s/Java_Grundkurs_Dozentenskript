@@ -6,11 +6,11 @@ public interface SelfCleaningInterface {
     /**
      * Starts the cleaning process.
      */
-    public void startCleaning();
+    void startCleaning();
     
     /**
      * Checks if the object is dirty.
      * @return true if the object is dirty, false otherwise.
      */
-    public boolean checkIfDirty();
+    boolean checkIfDirty();
 }

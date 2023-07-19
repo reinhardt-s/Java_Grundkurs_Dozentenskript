@@ -1,4 +1,4 @@
-# Hashmaps in Java
+# Kapitel 8 Hashmaps in Java
 
 Eine HashMap ist eine Datenstruktur in Java, die verwendet wird, um Schlüssel-Wert-Paare zu speichern. Sie basiert auf dem Konzept der Hashtabellen und ermöglicht den schnellen Zugriff auf die gespeicherten Werte anhand des zugehörigen Schlüssels. In diesem Kapitel werden wir uns eingehend mit Hashmaps in Java befassen und ihre Verwendung verstehen.
 

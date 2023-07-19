@@ -1,167 +1,121 @@
-# Kapitel 7: Objektorientierte Programmierung (OOP) in Java
+# Kapitel 7: Objektorientierte Programmierung in Java
 
-Die Objektorientierte Programmierung (OOP) ist ein Programmierparadigma, das auf dem Konzept von "Objekten" basiert, die Datenstrukturen enthalten und Verhalten (Methoden) aufweisen können. Diese Objekte sind Instanzen von Klassen, die Sie als Vorlage oder Bauplan für die Erstellung von Objekten betrachten können. Java ist vollständig objektorientiert, mit wenigen Ausnahmen in den primitiven Datentypen.
+Objektorientierte Programmierung (OOP) ist ein Programmierparadigma, das auf dem Konzept der "Objekte" basiert, die Datenstrukturen und Methoden enthalten. In Java ist alles, mit Ausnahme von primitiven Datentypen, ein Objekt.
 
-**Klassen**
-Eine Klasse ist der Bauplan für ein Objekt, der die Attribute und Methoden definiert, die das Objekt haben wird. Ein Attribut ist eine Eigenschaft des Objekts, während eine Methode das Verhalten ist, das das Objekt durchführen kann. Klassen in Java werden mit dem Schlüsselwort `class` definiert.
+## Die vier Säulen der OOP
+
+### 1. Verkapselung (Encapsulation)
+
+Verkapselung ist das Einschließen von Daten und den dazu gehörenden Funktionen in einer einzelnen Einheit, nämlich einer Klasse. Durch Verkapselung können wir den Zugriff auf die Daten kontrollieren und sie vor unerwarteter Manipulation schützen. In Java erreichen wir die Verkapselung durch den Gebrauch von Modifikatoren (private, public und protected) und durch Getter- und Setter-Methoden.
+
+### 2. Vererbung (Inheritance)
+
+Vererbung ist ein Merkmal, das es uns ermöglicht, eine neue Klasse zu definieren, die bereits definierte Methoden und Attribute einer bestehenden Klasse erbt. Dies ermöglicht Wiederverwendung von Code, fördert die Modularität und führt zu einer hierarchischen Klassifizierung. 
+
+### 3. Polymorphie (Polymorphism)
+
+Polymorphie erlaubt es uns, eine Methode auf unterschiedliche Weise zu verwenden. Es gibt zwei Arten von Polymorphie in Java: Compile-Zeit-Polymorphie (oder Überladung) und Laufzeit-Polymorphie (oder Überschreiben). 
+
+### 4. Abstraktion (Abstraction)
+
+Abstraktion verbirgt die Komplexität der Implementierungsdetails und zeigt nur die Funktionalität dem Benutzer. In Java können wir Abstraktion mit Hilfe von abstrakten Klassen und Interfaces erreichen.
+
+## Klassen und Objekte
+
+In Java ist eine Klasse eine Vorlage oder ein Bauplan für die Erstellung von Objekten. Ein Objekt ist eine Instanz einer Klasse, und es kann mehrere Instanzen derselben Klasse geben.
 
 ```java
 public class Auto {
     // Attribute
-    String marke;
-    String modell;
-    int baujahr;
+    private String marke;
+    private String farbe;
 
-    // Methode
-    void hupen() {
-        System.out.println("Hup, hup!");
+    // Methoden
+    public void fahren() {
+        System.out.println("Das Auto fährt.");
     }
+
+    // Getter und Setter...
 }
 ```
 
-**Objekte**
-Ein Objekt ist eine Instanz einer Klasse. Sie können ein Objekt einer Klasse erstellen, indem Sie das Schlüsselwort `new` und den Klassennamen verwenden. Sie können dann auf die Attribute und Methoden des Objekts zugreifen.
+Um ein Objekt der Klasse `Auto` zu erstellen, würden wir folgenden Code verwenden:
 
 ```java
-public static void main(String[] args) {
-    Auto meinAuto = new Auto();  // Erzeugt ein neues Auto-Objekt
-    meinAuto.marke = "BMW";  // Zugriff auf das Attribut
-    meinAuto.hupen();  // Aufruf der Methode
-}
+Auto meinAuto = new Auto();
 ```
 
-**Vererbung**
-In Java kann eine Klasse Eigenschaften und Methoden von einer anderen Klasse erben. Dies wird Vererbung genannt und erfolgt durch das Schlüsselwort `extends`.
+Das Schlüsselwort `new` wird in Java verwendet, um ein neues Objekt zu erzeugen.
 
-```java
-public class Sportwagen extends Auto {
-    // Sportwagen erbt alle Attribute und Methoden von Auto
-    boolean kabriolett;
+## Konstruktoren
 
-    void rennen() {
-        System.out.println("Schnell fahren!");
-    }
-}
-```
-
-**Polymorphie**
-Polymorphie in Java ermöglicht es, dass eine Methode unterschiedliches Verhalten aufweist, abhängig vom Objekt, das sie aufruft. Sie können Polymorphie in Java durch Methodenüberschreiben (d.h., eine Methode in der Unterklasse hat den gleichen Namen wie eine Methode in der Superklasse) und Interfaces erreichen.
-
-**Encapsulation**
-Die Kapselung in Java ist ein Mechanismus zum Verbergen von Daten (Attribute) und Methoden innerhalb einer Klasse vor dem Zugriff von außen. In Java wird die Kapselung durch den Zugriffsmodifikator `private` erreicht, und Sie verwenden "Getter" und "Setter" Methoden, um auf die privaten Attribute zuzugreifen und diese zu ändern.
+Ein Konstruktor in Java ist ein spezieller Methodentyp, der beim Erstellen eines Objekts aufgerufen wird. Es hat den gleichen Namen wie die Klasse und hat keinen Rückgabetyp.
 
 ```java
 public class Auto {
-    private String marke;  // Private Attribute
+    private String marke;
 
-    // Getter-Methode
-    public String getMarke() {
-        return marke;
-    }
-
-    // Setter-Methode
-    public void setMarke(String marke) {
+    // Konstruktor
+    public Auto(String marke) {
         this.marke = marke;
     }
+
+    // Methoden, Getter und Setter...
 }
 ```
 
-**Abstraktion**
-Die Abstraktion in Java ist der Prozess des Verbergens der Implementierungsdetails und des Zeigens nur der Funktionalität. Abstrakte Klassen und Interfaces unterstützen die Abstraktion in Java. Sie können keine Instanz einer abstrakten Klasse erstellen, und sie kann sowohl abstrakte (ohne Körper) als auch nicht-abstrakte Methoden enthalten.
+Um ein neues Auto-Objekt mit einer bestimmten Marke zu erstellen, könnten wir jetzt folgenden Code verwenden:
 
 ```java
-public abstract class Fahrzeug {
-    public abstract void fahren();
-}
+Auto meinAuto = new Auto("Mercedes");
 ```
 
-## Vererbung (Inheritance)
+## Instanzmethoden und -attribute
 
-In Java ermöglicht die Vererbung, dass eine Klasse Eigenschaften und Methoden von einer anderen Klasse erbt. Dies ist eine zentrale Säule des OOP-Prinzips, da es Code-Wiederverwendung fördert und die Komplexität von Software reduziert.
+Instanzmethoden und -attribute sind Methoden und Attribute, die zu einem spezifischen Objekt einer Klasse gehören. Jedes Objekt hat seine eigenen Kopien dieser Variablen und Methoden.
 
-### Grundkonzepte
+## Statische Methoden und Attribute
 
-Die Klasse, die Eigenschaften und Methoden bereitstellt, wird als "Superklasse" oder "Basisklasse" bezeichnet, während die Klasse, die diese Eigenschaften und Methoden erbt, als "Unterklasse" oder "abgeleitete Klasse" bezeichnet wird.
+Statische Methoden und Attribute gehören zur Klasse selbst und nicht zu den Instanzen der Klasse. Sie können aufgerufen oder verwendet werden, ohne dass eine Instanz der Klasse erstellt wird. Statische Methoden und Attribute werden mit dem Schlüsselwort `static` definiert.
 
-In Java wird die Vererbung durch das Schlüsselwort `extends` erreicht.
 
-```java
-public class BaseClass {
-    // Code der BaseClass
-}
+# Generische Klassen in Java
 
-public class DerivedClass extends BaseClass {
-    // Code der DerivedClass
-}
-```
+Generische Klassen sind eine Kernfunktionalität in Java, die es uns ermöglicht, eine einzelne Klasse, Methode oder Schnittstelle zu schreiben, die für verschiedene Datentypen arbeiten kann. Sie verbessern die Typensicherheit und die Wiederverwendbarkeit des Codes.
 
-In diesem Beispiel erbt `DerivedClass` alle zugänglichen Eigenschaften und Methoden von `BaseClass`.
+Eine generische Klasse in Java ist definiert ähnlich wie eine normale Klasse, mit der Ausnahme, dass sie einen oder mehrere Typparameter hat. Diese Parameter, die durch spitze Klammern ("<" und ">") angegeben werden, können für verschiedene Datentypen stehen.
 
-### Zugriffsmodifikatoren und Vererbung
+## Syntax:
 
-Nicht alle Eigenschaften und Methoden einer Basisklasse sind für eine abgeleitete Klasse sichtbar. Der Zugang hängt von den Zugriffsmodifikatoren ab:
-
-- `private`: Die Eigenschaften oder Methoden sind nur innerhalb der Klasse sichtbar, in der sie definiert sind.
-- `protected`: Die Eigenschaften oder Methoden sind innerhalb derselben Klasse, in einer abgeleiteten Klasse und im gleichen Paket sichtbar.
-- Ohne Zugriffsmodifikator (Paket-privat): Die Eigenschaften oder Methoden sind innerhalb derselben Klasse und im gleichen Paket sichtbar.
-- `public`: Die Eigenschaften oder Methoden sind überall sichtbar.
-
-### Überschreiben von Methoden (Method Overriding)
-
-Eine Unterklasse kann eine Methode der Superklasse "überschreiben", indem sie eine Methode mit derselben Signatur definiert. Dies ermöglicht der Unterklasse, das Verhalten der Superklasse zu ändern. Beim Überschreiben einer Methode ist es üblich, die Annotation `@Override` zu verwenden, um klarzustellen, dass die Methode in der Superklasse überschrieben wird.
+Hier ist ein einfacher Beispielcode, um eine generische Klasse zu erstellen:
 
 ```java
-public class BaseClass {
-    public void doSomething() {
-        // Code...
+public class GenericClass<T> {
+    // T steht für "Type"
+    private T t;
+
+    public void setValue(T t) {
+        this.t = t;
     }
-}
 
-public class DerivedClass extends BaseClass {
-    @Override
-    public void doSomething() {
-        // anderer Code...
+    public T getValue() {
+        return t;
     }
 }
 ```
+In diesem Beispiel repräsentiert `T` den Typ, der zur Laufzeit bereitgestellt wird. Sie können es als Platzhalter für den tatsächlichen Typ betrachten, der zur Erzeugung eines Objekts der Klasse `GenericClass` verwendet wird.
 
-### Super Keyword
+## Verwendung:
 
-Das Schlüsselwort `super` in Java wird verwendet, um auf Eigenschaften und Methoden der unmittelbaren Superklasse zuzugreifen. Es ist besonders nützlich, wenn die Unterklasse Methoden der Superklasse überschreibt, aber dennoch auf das ursprüngliche Verhalten zugreifen möchte.
-
-```java
-public class BaseClass {
-    public void doSomething() {
-        // Code...
-    }
-}
-
-public class DerivedClass extends BaseClass {
-    @Override
-    public void doSomething() {
-        super.doSomething(); // ruft die Methode doSomething der Superklasse auf
-        // zusätzlicher Code...
-    }
-}
-```
-
-### Abstrakte Klassen und Methoden
-
-Abstrakte Klassen sind Klassen, die nicht instanziiert werden können und oft als Basisklassen dienen. Sie können abstrakte Methoden enthalten, die von jeder abgeleiteten Klasse implementiert werden müssen. Abstrakte Klassen und Methoden werden mit dem Schlüsselwort `abstract` definiert.
+Ein Objekt einer generischen Klasse kann wie folgt erzeugt werden:
 
 ```java
-public abstract class AbstractBaseClass {
-    public abstract void doSomething();
-}
+GenericClass<Integer> intObj = new GenericClass<Integer>();
+intObj.setValue(10);
 
-public class DerivedClass extends AbstractBaseClass {
-    @Override
-    public void doSomething() {
-        // implementiert die abstrakte Methode
-    }
-}
+GenericClass<String> strObj = new GenericClass<String>();
+strObj.setValue("Hello World");
 ```
+Hier haben wir zwei verschiedene Typen, Integer und String, verwendet, um die generische Klasse zu instanziieren. Wir können dann auf die Methoden der Klasse zugreifen, die für diese spezifischen Typen arbeiten.
 
-In diesem Beispiel muss `DerivedClass` die abstrakte Methode `doSomething` implementieren. Es wäre ein Kompilierungsfehler, wenn es dies nicht täte.
-
-Vererbung ist ein mächtiges Konzept in OOP, das zur Erstellung flexibler und wiederverwendbarer Software beiträgt. Es erlaubt der Programmstruktur, hierarchisch und damit leichter zu verstehen und zu warten zu sein.
+Generische Klassen bieten viele Vorteile, einschließlich Typensicherheit (Vermeidung von ClassCastException zur Laufzeit), Code-Wiederverwendung und Leistungsoptimierung für die Java Virtual Machine (JVM).
