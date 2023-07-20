@@ -150,25 +150,26 @@ In einem typischen Gradle-Projekt gibt es eine `build.gradle` Datei an der Wurze
 
 ```groovy
 plugins {
-    id 'java'∏
+    id 'java'
 }
 
-group 'de.pccollege'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
+version = '1.0.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.apache.httpcomponents:httpclient:4.5.13',
-    testImplementation 'junit:junit:4.12'
+    implementation 'commons-io:commons-io:2.6'
 }
 
-test {
-    useJUnitPlatform()
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'gradletest.App'
+    )
+  }
 }
 ```
 
