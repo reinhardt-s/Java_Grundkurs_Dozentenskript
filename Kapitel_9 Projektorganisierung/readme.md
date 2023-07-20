@@ -213,3 +213,178 @@ Wobei die Versionsnummer angepasst wird.
 ````
 gradlew build
 ````
+# Nutzung von Maven Repository
+
+[Maven Repository](https://mvnrepository.com/) ist eine umfassende Quelle für Java-Bibliotheken, die Sie in Ihr Projekt einbinden können. Es unterstützt mehrere Build-Tools, darunter Maven, Gradle, Ivy und SBT.
+
+## Finden einer Bibliothek
+
+Um eine Bibliothek zu finden, nutzen Sie das Suchfeld auf der Startseite. Geben Sie den Namen der Bibliothek oder Schlüsselworte ein und drücken Sie die Eingabetaste. In der Ergebnisliste finden Sie möglicherweise verschiedene Versionen der Bibliothek, sortiert nach Veröffentlichungsdatum.
+
+## Einbinden einer Bibliothek
+
+Um eine Bibliothek in Ihr Projekt zu integrieren, wählen Sie die gewünschte Version aus. Sie gelangen dann zu einer Seite mit Details zur Bibliothek. Dort finden Sie unter anderem die Dependency-Informationen für verschiedene Build-Tools.
+
+Wenn Sie Maven verwenden, kopieren Sie den bereitgestellten Code aus dem Maven-Bereich und fügen Sie ihn in die `<dependencies>`-Sektion Ihrer `pom.xml`-Datei ein. Beispiel:
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.13.0</version>
+</dependency>
+```
+
+Für Gradle-Nutzer gibt es einen entsprechenden Abschnitt. Der Code aus diesem Abschnitt kann in den `dependencies`-Block Ihrer `build.gradle`-Datei eingefügt werden. Beispiel:
+
+```groovy
+implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+```
+
+Anschließend wird die ausgewählte Bibliothek beim nächsten Build-Prozess automatisch heruntergeladen und in Ihr Projekt eingebunden. 
+
+Stellen Sie sicher, dass Sie die richtige Version für Ihre Anforderungen und Ihre Java-Version wählen. Manchmal ist es besser, eine ältere, stabile Version zu verwenden, anstatt die neueste, möglicherweise instabile Version. 
+
+Beachten Sie auch, dass einige Bibliotheken andere Bibliotheken als Abhängigkeiten haben. Diese werden normalerweise automatisch mit heruntergeladen und eingebunden.
+
+
+# Projekt Einbindung und Nutzung von Lombok
+
+Lombok ist ein sehr nützliches Java-Framework, das es ermöglicht, Boilerplate-Code in Java-Projekten zu reduzieren, indem es während der Kompilierung Code generiert. Es stellt eine Reihe von Annotationen bereit, mit denen Sie Ihren Code sauberer und lesbarer machen können.
+
+## Projekt Einbindung
+
+Um Lombok in Ihr Projekt zu integrieren, müssen Sie es zuerst als Abhängigkeit hinzufügen.
+
+Wenn Sie Maven verwenden, fügen Sie folgenden Code in Ihre `pom.xml` Datei ein:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.20</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+
+Für Gradle fügen Sie folgenden Code in Ihre `build.gradle` Datei ein:
+
+```groovy
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+```
+
+##  Nutzung von Lombok
+
+Nachdem Lombok in Ihr Projekt eingebunden wurde, können Sie seine Vorteile nutzen, indem Sie die bereitgestellten Annotationen verwenden. Hier sind einige Beispiele:
+
+- `@Getter` und `@Setter`: Diese Annotationen erzeugen Getter- und Setter-Methoden für Ihre Felder.
+
+```java
+@Getter
+@Setter
+public class Book {
+    private String title;
+    private String author;
+}
+```
+
+- `@ToString`: Diese Annotation erzeugt eine `toString()` Methode.
+
+- `@EqualsAndHashCode`: Diese Annotation erzeugt `equals(Object other)` und `hashCode()` Methoden.
+
+- `@Data`: Eine bequeme Kurzform, die `@Getter`, `@Setter`, `@ToString`, `@EqualsAndHashCode` und andere nützliche Annotationen in einer einzigen Annotation kombiniert.
+
+```java
+@Data
+public class Book {
+    private String title;
+    private String author;
+}
+```
+
+- `@NoArgsConstructor`, `@RequiredArgsConstructor` und `@AllArgsConstructor`: Diese Annotationen erzeugen Konstruktoren ohne Argumente, mit den erforderlichen Argumenten oder mit allen Argumenten.
+
+Beachten Sie bitte, dass Lombok eine Build-Zeit-Abhängigkeit ist und zur Laufzeit nicht benötigt wird.
+
+Schließlich müssen Sie sicherstellen, dass Ihr IDE Lombok-Plugin installiert hat (falls Sie eine verwenden), um die von Lombok generierten Methoden korrekt zu erkennen. Für IntelliJ IDEA können Sie das Plugin über `File > Settings > Plugins > Lombok Plugin` installieren. Für Eclipse gibt es ein ähnliches Plugin, das über den Eclipse Marketplace verfügbar ist.
+
+# Eine eigene Dependency erstellen
+
+In diesem Kapitel werden wir eine einfache Java-Bibliothek erstellen, die als JAR-Datei mit Maven verpackt wird. Wir werden dann zeigen, wie man diese JAR-Datei in einem anderen Maven-Projekt verwendet. Als Beispiel verwenden wir eine einfache Wrapper-Klasse für `System.out.println()`, die wir `Print` nennen und die eine Methode `toConsole()` hat.
+
+## Erstellen der Java-Bibliothek
+
+Erstellen Sie zunächst ein neues Maven-Projekt und fügen Sie eine Klasse namens `Print` hinzu:
+
+```java
+public class Print {
+    public static void toConsole(String message) {
+        System.out.println(message);
+    }
+}
+```
+
+## Konfigurieren der POM.xml
+
+Um Ihre Anwendung als JAR-Datei zu verpacken, müssen Sie das Maven JAR Plugin in Ihrer `pom.xml` konfigurieren. Fügen Sie dazu folgenden Code in den `<build>` Abschnitt Ihrer `pom.xml` Datei ein:
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <classpathPrefix>lib/</classpathPrefix>
+                        <mainClass>com.example.Print</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+Ersetzen Sie `com.example.Print` mit dem vollständig qualifizierten Namen Ihrer Hauptklasse.
+
+## Erstellen der JAR-Datei
+
+Navigieren Sie in der Befehlszeile zum Verzeichnis Ihres Maven-Projekts und führen Sie den Befehl `mvn package` aus. Maven kompiliert Ihr Projekt und verpackt es in eine JAR-Datei im `target` Verzeichnis Ihres Projekts.
+
+## Verwendung der JAR-Datei in einem anderen Projekt
+
+Um die erstellte JAR-Datei in einem anderen Maven-Projekt zu verwenden, müssen Sie sie zunächst in Ihrem lokalen Maven-Repository installieren. Dies kann mit dem Befehl `mvn install` erfolgen.
+
+Sobald die JAR-Datei installiert ist, können Sie sie als Abhängigkeit in einem anderen Maven-Projekt hinzufügen. Fügen Sie dazu folgenden Code in den `<dependencies>` Abschnitt Ihrer `pom.xml` Datei ein:
+
+```xml
+<dependency>
+    <groupId>com.example</groupId>
+    <artifactId>print-lib</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+Ersetzen Sie `com.example` und `print-lib` durch die entsprechenden Werte Ihrer Bibliothek.
+
+Jetzt können Sie die `Print.toConsole()` Methode in Ihrem Projekt verwenden:
+
+```java
+import com.example.Print;
+
+public class Main {
+    public static void main(String[] args) {
+        Print.toConsole("Hello, World!");
+    }
+}
+```
+In diesem Beispiel wurde `com.example.Print` durch den tatsächlichen Pfad Ihrer `Print` Klasse ersetzt.
+
+Das war's! Sie haben nun erfolgreich eine JAR-Datei mit Maven erstellt und diese in einem anderen Projekt verwendet.
